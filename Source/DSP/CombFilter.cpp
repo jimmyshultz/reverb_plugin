@@ -1,4 +1,5 @@
 #include "CombFilter.h"
+#include "LowpassFilter.h"
 #include <algorithm>
 #include <cmath>
 

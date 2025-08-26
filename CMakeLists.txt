@@ -6,8 +6,8 @@ project(ReverbPlugin VERSION 1.0.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Add subdirectory for JUCE if using as subdirectory
-# find_package(juce REQUIRED) # or add_subdirectory(JUCE)
+# Add JUCE subdirectory
+add_subdirectory(JUCE)
 
 # Plugin formats to build
 set(FORMATS AU VST3 Standalone)

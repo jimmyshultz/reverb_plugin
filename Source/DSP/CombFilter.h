@@ -2,7 +2,9 @@
 
 #include <JuceHeader.h>
 #include "DelayLine.h"
-#include "LowpassFilter.h"
+
+// Forward declaration
+class LowpassFilter;
 
 /**
  * @brief Comb filter for reverb feedback processing
