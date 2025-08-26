@@ -44,7 +44,7 @@ float LowpassFilter::processSample(float inputSample)
 void LowpassFilter::updateCoefficient()
 {
     // Calculate coefficient from cutoff frequency
-    float rc = 1.0f / (2.0f * juce::MathConstants<float>::pi * m_cutoffFreq);
+    float rc = 1.0f / (2.0f * 3.14159265359f * m_cutoffFreq);
     float dt = 1.0f / static_cast<float>(m_sampleRate);
     m_coefficient = rc / (rc + dt);
 }
@@ -97,7 +97,7 @@ float TwoPoleFilter::processSample(float inputSample)
 void TwoPoleFilter::updateCoefficients()
 {
     // Calculate biquad coefficients for lowpass filter
-    float omega = 2.0f * juce::MathConstants<float>::pi * m_cutoffFreq / static_cast<float>(m_sampleRate);
+    float omega = 2.0f * 3.14159265359f * m_cutoffFreq / static_cast<float>(m_sampleRate);
     float sin_omega = std::sin(omega);
     float cos_omega = std::cos(omega);
     float alpha = sin_omega / (2.0f * m_resonance);
@@ -168,7 +168,7 @@ float ShelfFilter::processSample(float inputSample)
 void ShelfFilter::updateCoefficients()
 {
     float A = std::pow(10.0f, m_gainDb / 40.0f); // Square root of gain
-    float omega = 2.0f * juce::MathConstants<float>::pi * m_frequency / static_cast<float>(m_sampleRate);
+    float omega = 2.0f * 3.14159265359f * m_frequency / static_cast<float>(m_sampleRate);
     float sin_omega = std::sin(omega);
     float cos_omega = std::cos(omega);
     float S = 1.0f; // Shelf slope parameter

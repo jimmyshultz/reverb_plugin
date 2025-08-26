@@ -1,6 +1,10 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include <string>
+#include <vector>
+#include <memory>
+#include <functional>
 
 /**
  * @brief Parameter identifiers and definitions for the Reverb Plugin

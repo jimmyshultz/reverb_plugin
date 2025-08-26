@@ -40,7 +40,7 @@ void LFO::setWaveform(Waveform waveform)
 
 void LFO::setPhase(float phase)
 {
-    m_phase = std::fmod(phase, 2.0f * juce::MathConstants<float>::pi);
+    m_phase = std::fmod(phase, 2.0f * 3.14159265359f);
 }
 
 float LFO::getNextSample()
@@ -49,15 +49,15 @@ float LFO::getNextSample()
     
     // Advance phase
     m_phase += m_phaseIncrement;
-    if (m_phase >= 2.0f * juce::MathConstants<float>::pi)
-        m_phase -= 2.0f * juce::MathConstants<float>::pi;
+    if (m_phase >= 2.0f * 3.14159265359f) // 2*pi
+        m_phase -= 2.0f * 3.14159265359f;
     
     return output;
 }
 
 void LFO::updatePhaseIncrement()
 {
-    m_phaseIncrement = 2.0f * juce::MathConstants<float>::pi * m_frequency / static_cast<float>(m_sampleRate);
+    m_phaseIncrement = 2.0f * 3.14159265359f * m_frequency / static_cast<float>(m_sampleRate);
 }
 
 float LFO::generateWaveform(float phase) const
@@ -69,7 +69,7 @@ float LFO::generateWaveform(float phase) const
             
         case Waveform::Triangle:
         {
-            float normalizedPhase = phase / (2.0f * juce::MathConstants<float>::pi);
+            float normalizedPhase = phase / (2.0f * 3.14159265359f);
             if (normalizedPhase < 0.5f)
                 return 4.0f * normalizedPhase - 1.0f;
             else
@@ -78,12 +78,12 @@ float LFO::generateWaveform(float phase) const
         
         case Waveform::Sawtooth:
         {
-            float normalizedPhase = phase / (2.0f * juce::MathConstants<float>::pi);
+            float normalizedPhase = phase / (2.0f * 3.14159265359f);
             return 2.0f * normalizedPhase - 1.0f;
         }
         
         case Waveform::Square:
-            return (phase < juce::MathConstants<float>::pi) ? 1.0f : -1.0f;
+            return (phase < 3.14159265359f) ? 1.0f : -1.0f;
             
         case Waveform::Noise:
         {

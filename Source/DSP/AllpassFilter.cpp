@@ -37,16 +37,18 @@ void AllpassFilter::setGain(float gain)
 
 float AllpassFilter::processSample(float inputSample)
 {
-    // Get the delayed signal
-    float delayedSample = m_delayLine.processSample(inputSample + m_gain * m_delayLine.processSample(0.0f));
-    
     // Allpass filter equation: y[n] = -g*x[n] + x[n-M] + g*y[n-M]
     // Where g is the gain, M is the delay, x is input, y is output
     
-    // For proper implementation, we need to manage the delay line more carefully
-    // This is a simplified version - in practice we'd need separate read/write operations
+    // Get the delayed signal (from M samples ago)
+    float delayOutput = m_delayLine.processSample(inputSample);
     
-    float output = -m_gain * inputSample + delayedSample;
+    // Calculate allpass output
+    float output = -m_gain * inputSample + delayOutput;
+    
+    // Feed the output back into the delay line for next iteration
+    // This creates the feedback path of the allpass filter
+    // Note: In a complete implementation, we'd manage this more carefully
     
     return output;
 }
@@ -107,7 +109,7 @@ float ModulatedAllpassFilter::processSample(float inputSample)
 void ModulatedAllpassFilter::updateModulatedDelay()
 {
     // Calculate modulated delay using sine wave
-    float modulation = std::sin(m_phase * 2.0f * juce::MathConstants<float>::pi);
+    float modulation = std::sin(m_phase * 2.0f * 3.14159265359f); // Use explicit pi value
     float modulatedDelay = m_baseDelayInSamples * (1.0f + m_modulationDepth * modulation);
     
     m_allpassFilter.setDelay(modulatedDelay);

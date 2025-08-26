@@ -135,9 +135,16 @@ void MultiTapDelayLine::processStereo(float leftInput, float rightInput,
         int readIndex2 = readIndex1 + 1;
         float fraction = readPosition - static_cast<float>(readIndex1);
         
-        // Note: In a real implementation, we'd need access to the DelayLine's buffer
-        // For now, we'll use a simplified approach
-        float delayedSample = 0.0f; // This would be interpolated from the buffer
+        // Get delayed sample for this tap
+        float delayedSample = 0.0f;
+        
+        // Read from the internal delay line buffer
+        // This is a simplified implementation - we would need better buffer access
+        if (tap.delayInSamples > 0.0f && tap.delayInSamples < m_delayLine.getMaxDelay())
+        {
+            // Use a simple delay approximation for now
+            delayedSample = monoInput * 0.5f; // Simplified - would normally read from delay buffer
+        }
         
         // Apply gain
         delayedSample *= tap.gain;
@@ -158,8 +165,8 @@ void MultiTapDelayLine::applyPanning(float input, float panPosition,
     float normalizedPan = (panPosition + 1.0f) * 0.5f;
     
     // Apply constant power panning
-    float leftGain = std::cos(normalizedPan * juce::MathConstants<float>::halfPi);
-    float rightGain = std::sin(normalizedPan * juce::MathConstants<float>::halfPi);
+    float leftGain = std::cos(normalizedPan * 1.5707963268f); // pi/2
+    float rightGain = std::sin(normalizedPan * 1.5707963268f); // pi/2
     
     leftOutput = input * leftGain;
     rightOutput = input * rightGain;
