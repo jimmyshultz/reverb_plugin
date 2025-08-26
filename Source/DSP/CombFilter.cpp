@@ -65,6 +65,7 @@ float CombFilter::processSample(float inputSample)
 // DampedCombFilter implementation
 DampedCombFilter::DampedCombFilter()
     : m_sampleRate(44100.0)
+    , m_dampingFilter(std::make_unique<LowpassFilter>())
 {
 }
 
@@ -72,13 +73,13 @@ void DampedCombFilter::prepare(double sampleRate, int maxDelayInSamples)
 {
     m_sampleRate = sampleRate;
     m_combFilter.prepare(sampleRate, maxDelayInSamples);
-    m_dampingFilter.prepare(sampleRate);
+    m_dampingFilter->prepare(sampleRate);
 }
 
 void DampedCombFilter::reset()
 {
     m_combFilter.reset();
-    m_dampingFilter.reset();
+    m_dampingFilter->reset();
 }
 
 void DampedCombFilter::setDelay(float delayInSamples)
@@ -99,7 +100,7 @@ void DampedCombFilter::setFeedback(float gain)
 void DampedCombFilter::setDamping(float damping)
 {
     float cutoffFreq = dampingToCutoff(damping);
-    m_dampingFilter.setCutoffFrequency(cutoffFreq);
+    m_dampingFilter->setCutoffFrequency(cutoffFreq);
 }
 
 float DampedCombFilter::processSample(float inputSample)
@@ -110,7 +111,7 @@ float DampedCombFilter::processSample(float inputSample)
     // Apply damping filter to the feedback path
     // Note: In a real implementation, the damping filter would be in the feedback loop
     // This is a simplified approach
-    float dampedOutput = m_dampingFilter.processSample(combOutput);
+    float dampedOutput = m_dampingFilter->processSample(combOutput);
     
     return dampedOutput;
 }

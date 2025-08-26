@@ -2,6 +2,7 @@
 
 #include <JuceHeader.h>
 #include "DelayLine.h"
+#include <memory>
 
 // Forward declaration
 class LowpassFilter;
@@ -145,7 +146,7 @@ public:
     
 private:
     CombFilter m_combFilter;
-    LowpassFilter m_dampingFilter;
+    std::unique_ptr<LowpassFilter> m_dampingFilter;
     double m_sampleRate;
     
     /**

@@ -301,8 +301,8 @@ float ReverbEngine::processLateReverb(float input)
     float combOutput = m_combFilterBank->processSample(input);
     
     // Apply modulation to delay times
-    float delayModulation = m_modulationMatrix->getModulationValue(ModulationMatrix::Destination::DelayTime);
-    // Note: In a complete implementation, we would apply this modulation to individual delay lines
+    // Note: In a complete implementation, we would apply modulation to individual delay lines
+    // float delayModulation = m_modulationMatrix->getModulationValue(ModulationMatrix::Destination::DelayTime);
     
     // Process through allpass network for diffusion
     float diffusedOutput = m_allpassNetwork->processSample(combOutput);
