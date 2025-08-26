@@ -1,0 +1,44 @@
+GNU GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007
+
+Copyright (C) 2024 Your Company Name
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+================================================================================
+
+Additional License Information:
+
+This plugin uses the JUCE framework, which is dual-licensed under the 
+GNU General Public License v3 and a commercial license. 
+
+If you distribute this plugin commercially, you may need to obtain a 
+commercial JUCE license. For more information, visit:
+https://juce.com/get-juce/
+
+================================================================================
+
+Third-Party Libraries:
+
+This project may include or link to third-party libraries with their own 
+licenses. Please refer to the respective library documentation for 
+licensing information.
+
+================================================================================
+
+Contact Information:
+
+For licensing questions or commercial inquiries, please contact:
+Email: your.email@company.com
+Website: https://yourcompany.com

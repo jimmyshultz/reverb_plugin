@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Preset name="Vocal Reverb" author="Factory" description="Tailored for vocal processing with clarity" category="Vocal" dateCreated="2024-01-01T00:00:00" dateModified="2024-01-01T00:00:00">
+  <Parameters>
+    <Parameter id="roomSize" value="1.2"/>
+    <Parameter id="decayTime" value="1.8"/>
+    <Parameter id="preDelay" value="40.0"/>
+    <Parameter id="damping" value="55.0"/>
+    <Parameter id="wetDryMix" value="30.0"/>
+    <Parameter id="earlyLateBalance" value="65.0"/>
+    <Parameter id="diffusion" value="75.0"/>
+    <Parameter id="modulationRate" value="1.0"/>
+    <Parameter id="modulationDepth" value="20.0"/>
+  </Parameters>
+</Preset>

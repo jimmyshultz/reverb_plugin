@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Preset name="Medium Hall" author="Factory" description="Classic concert hall reverb with natural decay" category="Halls" dateCreated="2024-01-01T00:00:00" dateModified="2024-01-01T00:00:00">
+  <Parameters>
+    <Parameter id="roomSize" value="1.5"/>
+    <Parameter id="decayTime" value="2.5"/>
+    <Parameter id="preDelay" value="25.0"/>
+    <Parameter id="damping" value="40.0"/>
+    <Parameter id="wetDryMix" value="35.0"/>
+    <Parameter id="earlyLateBalance" value="50.0"/>
+    <Parameter id="diffusion" value="80.0"/>
+    <Parameter id="modulationRate" value="1.2"/>
+    <Parameter id="modulationDepth" value="20.0"/>
+  </Parameters>
+</Preset>
