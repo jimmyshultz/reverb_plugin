@@ -155,7 +155,7 @@ void ReverbEngine::updateParameters()
     if (!m_isPrepared) return;
     
     // Update pre-delay
-    int preDelaySamples = static_cast<int>(m_preDelayMs * m_sampleRate / 1000.0f);
+    // int preDelaySamples = static_cast<int>(m_preDelayMs * m_sampleRate / 1000.0f);
     // Note: In a more complete implementation, we'd smoothly transition the delay time
     
     // Update comb filter feedback based on decay time

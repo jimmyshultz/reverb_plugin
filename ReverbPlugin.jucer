@@ -6,28 +6,12 @@
               cppLanguageStandard="17">
   <MAINGROUP id="uTJXYH" name="ReverbPlugin">
     <GROUP id="{F7B9D7E6-7A4B-4A4E-9B8D-2E5F6A7B8C9D}" name="Source">
-      <GROUP id="{A1B2C3D4-E5F6-7A8B-9C0D-1E2F3A4B5C6D}" name="DSP">
-        <FILE id="U9v8Vr" name="DelayLine.cpp" compile="1" resource="0" file="Source/DSP/DelayLine.cpp"/>
-        <FILE id="U9v8Vs" name="DelayLine.h" compile="0" resource="0" file="Source/DSP/DelayLine.h"/>
-        <FILE id="U9v8Vt" name="AllpassFilter.cpp" compile="1" resource="0" file="Source/DSP/AllpassFilter.cpp"/>
-        <FILE id="U9v8Vu" name="AllpassFilter.h" compile="0" resource="0" file="Source/DSP/AllpassFilter.h"/>
-        <FILE id="U9v8Vv" name="CombFilter.cpp" compile="1" resource="0" file="Source/DSP/CombFilter.cpp"/>
-        <FILE id="U9v8Vw" name="CombFilter.h" compile="0" resource="0" file="Source/DSP/CombFilter.h"/>
-        <FILE id="U9v8Vx" name="LowpassFilter.cpp" compile="1" resource="0" file="Source/DSP/LowpassFilter.cpp"/>
-        <FILE id="U9v8Vy" name="LowpassFilter.h" compile="0" resource="0" file="Source/DSP/LowpassFilter.h"/>
-        <FILE id="U9v8Vz" name="Modulator.cpp" compile="1" resource="0" file="Source/DSP/Modulator.cpp"/>
-        <FILE id="U9v8Va" name="Modulator.h" compile="0" resource="0" file="Source/DSP/Modulator.h"/>
-      </GROUP>
       <FILE id="vMBmfV" name="PluginProcessor.cpp" compile="1" resource="0" file="Source/PluginProcessor.cpp"/>
       <FILE id="vMBmfW" name="PluginProcessor.h" compile="0" resource="0" file="Source/PluginProcessor.h"/>
       <FILE id="vMBmfX" name="PluginEditor.cpp" compile="1" resource="0" file="Source/PluginEditor.cpp"/>
       <FILE id="vMBmfY" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
       <FILE id="vMBmfZ" name="ReverbEngine.cpp" compile="1" resource="0" file="Source/ReverbEngine.cpp"/>
       <FILE id="vMBmfa" name="ReverbEngine.h" compile="0" resource="0" file="Source/ReverbEngine.h"/>
-      <FILE id="vMBmfb" name="PresetManager.cpp" compile="1" resource="0" file="Source/PresetManager.cpp"/>
-      <FILE id="vMBmfc" name="PresetManager.h" compile="0" resource="0" file="Source/PresetManager.h"/>
-      <FILE id="vMBmfd" name="Parameters.cpp" compile="1" resource="0" file="Source/Parameters.cpp"/>
-      <FILE id="vMBmfe" name="Parameters.h" compile="0" resource="0" file="Source/Parameters.h"/>
     </GROUP>
   </MAINGROUP>
   <MODULES>
