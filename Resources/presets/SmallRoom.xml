@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Preset name="Small Room" author="Factory" description="Intimate room sound perfect for vocals and acoustic instruments" category="Rooms" dateCreated="2024-01-01T00:00:00" dateModified="2024-01-01T00:00:00">
+  <Parameters>
+    <Parameter id="roomSize" value="0.3"/>
+    <Parameter id="decayTime" value="0.8"/>
+    <Parameter id="preDelay" value="5.0"/>
+    <Parameter id="damping" value="60.0"/>
+    <Parameter id="wetDryMix" value="25.0"/>
+    <Parameter id="earlyLateBalance" value="60.0"/>
+    <Parameter id="diffusion" value="70.0"/>
+    <Parameter id="modulationRate" value="0.8"/>
+    <Parameter id="modulationDepth" value="15.0"/>
+  </Parameters>
+</Preset>

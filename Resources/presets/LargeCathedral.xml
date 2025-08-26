@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Preset name="Large Cathedral" author="Factory" description="Spacious cathedral with long, smooth decay" category="Churches" dateCreated="2024-01-01T00:00:00" dateModified="2024-01-01T00:00:00">
+  <Parameters>
+    <Parameter id="roomSize" value="3.5"/>
+    <Parameter id="decayTime" value="6.0"/>
+    <Parameter id="preDelay" value="80.0"/>
+    <Parameter id="damping" value="20.0"/>
+    <Parameter id="wetDryMix" value="40.0"/>
+    <Parameter id="earlyLateBalance" value="40.0"/>
+    <Parameter id="diffusion" value="85.0"/>
+    <Parameter id="modulationRate" value="0.6"/>
+    <Parameter id="modulationDepth" value="30.0"/>
+  </Parameters>
+</Preset>

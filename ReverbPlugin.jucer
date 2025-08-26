@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="VlQfSK" name="ReverbPlugin" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" version="1.0.0"
+              bundleIdentifier="com.yourcompany.ReverbPlugin" includeBinaryInAppConfig="1"
+              cppLanguageStandard="17">
+  <MAINGROUP id="uTJXYH" name="ReverbPlugin">
+    <GROUP id="{F7B9D7E6-7A4B-4A4E-9B8D-2E5F6A7B8C9D}" name="Source">
+      <GROUP id="{A1B2C3D4-E5F6-7A8B-9C0D-1E2F3A4B5C6D}" name="DSP">
+        <FILE id="U9v8Vr" name="DelayLine.cpp" compile="1" resource="0" file="Source/DSP/DelayLine.cpp"/>
+        <FILE id="U9v8Vs" name="DelayLine.h" compile="0" resource="0" file="Source/DSP/DelayLine.h"/>
+        <FILE id="U9v8Vt" name="AllpassFilter.cpp" compile="1" resource="0" file="Source/DSP/AllpassFilter.cpp"/>
+        <FILE id="U9v8Vu" name="AllpassFilter.h" compile="0" resource="0" file="Source/DSP/AllpassFilter.h"/>
+        <FILE id="U9v8Vv" name="CombFilter.cpp" compile="1" resource="0" file="Source/DSP/CombFilter.cpp"/>
+        <FILE id="U9v8Vw" name="CombFilter.h" compile="0" resource="0" file="Source/DSP/CombFilter.h"/>
+        <FILE id="U9v8Vx" name="LowpassFilter.cpp" compile="1" resource="0" file="Source/DSP/LowpassFilter.cpp"/>
+        <FILE id="U9v8Vy" name="LowpassFilter.h" compile="0" resource="0" file="Source/DSP/LowpassFilter.h"/>
+        <FILE id="U9v8Vz" name="Modulator.cpp" compile="1" resource="0" file="Source/DSP/Modulator.cpp"/>
+        <FILE id="U9v8Va" name="Modulator.h" compile="0" resource="0" file="Source/DSP/Modulator.h"/>
+      </GROUP>
+      <FILE id="vMBmfV" name="PluginProcessor.cpp" compile="1" resource="0" file="Source/PluginProcessor.cpp"/>
+      <FILE id="vMBmfW" name="PluginProcessor.h" compile="0" resource="0" file="Source/PluginProcessor.h"/>
+      <FILE id="vMBmfX" name="PluginEditor.cpp" compile="1" resource="0" file="Source/PluginEditor.cpp"/>
+      <FILE id="vMBmfY" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="vMBmfZ" name="ReverbEngine.cpp" compile="1" resource="0" file="Source/ReverbEngine.cpp"/>
+      <FILE id="vMBmfa" name="ReverbEngine.h" compile="0" resource="0" file="Source/ReverbEngine.h"/>
+      <FILE id="vMBmfb" name="PresetManager.cpp" compile="1" resource="0" file="Source/PresetManager.cpp"/>
+      <FILE id="vMBmfc" name="PresetManager.h" compile="0" resource="0" file="Source/PresetManager.h"/>
+      <FILE id="vMBmfd" name="Parameters.cpp" compile="1" resource="0" file="Source/Parameters.cpp"/>
+      <FILE id="vMBmfe" name="Parameters.h" compile="0" resource="0" file="Source/Parameters.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <VS2022 targetFolder="Builds/VisualStudio2022">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="ReverbPlugin"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="ReverbPlugin"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../juce"/>
+        <MODULEPATH id="juce_audio_devices" path="../../juce"/>
+        <MODULEPATH id="juce_audio_formats" path="../../juce"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../juce"/>
+        <MODULEPATH id="juce_audio_processors" path="../../juce"/>
+        <MODULEPATH id="juce_audio_utils" path="../../juce"/>
+        <MODULEPATH id="juce_core" path="../../juce"/>
+        <MODULEPATH id="juce_data_structures" path="../../juce"/>
+        <MODULEPATH id="juce_events" path="../../juce"/>
+        <MODULEPATH id="juce_graphics" path="../../juce"/>
+        <MODULEPATH id="juce_gui_basics" path="../../juce"/>
+        <MODULEPATH id="juce_gui_extra" path="../../juce"/>
+      </MODULEPATHS>
+    </VS2022>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="ReverbPlugin"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="ReverbPlugin"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../juce"/>
+        <MODULEPATH id="juce_audio_devices" path="../../juce"/>
+        <MODULEPATH id="juce_audio_formats" path="../../juce"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../juce"/>
+        <MODULEPATH id="juce_audio_processors" path="../../juce"/>
+        <MODULEPATH id="juce_audio_utils" path="../../juce"/>
+        <MODULEPATH id="juce_core" path="../../juce"/>
+        <MODULEPATH id="juce_data_structures" path="../../juce"/>
+        <MODULEPATH id="juce_events" path="../../juce"/>
+        <MODULEPATH id="juce_graphics" path="../../juce"/>
+        <MODULEPATH id="juce_gui_basics" path="../../juce"/>
+        <MODULEPATH id="juce_gui_extra" path="../../juce"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="ReverbPlugin"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="ReverbPlugin"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../juce"/>
+        <MODULEPATH id="juce_audio_devices" path="../../juce"/>
+        <MODULEPATH id="juce_audio_formats" path="../../juce"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../juce"/>
+        <MODULEPATH id="juce_audio_processors" path="../../juce"/>
+        <MODULEPATH id="juce_audio_utils" path="../../juce"/>
+        <MODULEPATH id="juce_core" path="../../juce"/>
+        <MODULEPATH id="juce_data_structures" path="../../juce"/>
+        <MODULEPATH id="juce_events" path="../../juce"/>
+        <MODULEPATH id="juce_graphics" path="../../juce"/>
+        <MODULEPATH id="juce_gui_basics" path="../../juce"/>
+        <MODULEPATH id="juce_gui_extra" path="../../juce"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+  </EXPORTFORMATS>
+</JUCERPROJECT>
